@@ -174,17 +174,17 @@
   .cell-data-table {
     font-size: 13px;
   }
-  
+
   .cell-data-table th,
   .cell-data-table td {
     padding: 8px 10px;
   }
-  
+
   .action-buttons {
     flex-direction: column;
     gap: 4px;
   }
-  
+
   .btn-sm {
     padding: 4px 8px;
     font-size: 11px;
@@ -324,7 +324,7 @@
     width: 100%;
   }
 }
-    
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -332,14 +332,14 @@
       margin: 0;
       overflow-x: hidden;
     }
-    
+
     #particles-js {
       position: fixed;
       width: 100%;
       height: 100%;
       z-index: -1;
     }
-    
+
     .container {
       max-width: 1000px;
       margin: 2rem auto;
@@ -348,7 +348,7 @@
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-    
+
     section {
       display: none;
       animation: fadeIn 0.5s ease;
@@ -356,12 +356,12 @@
     section.active-step {
       display: block;
     }
-    
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
+
     /* 细胞选择样式 */
     .select2-container {
       width: 100% !important;
@@ -408,7 +408,7 @@
       border: none;
       font-size: 1rem;
     }
-    
+
     /* 数据输入样式 */
     .data-input-container {
       margin-top: 1.5rem;
@@ -439,7 +439,7 @@
       height: 2px;
       background: #1890ff;
     }
-    
+
     .tab-content {
       display: none;
       animation: fadeIn 0.3s ease;
@@ -447,7 +447,7 @@
     .tab-content.active {
       display: block;
     }
-    
+
     /* 手动输入表格 */
 
     .cell-data-table {
@@ -461,7 +461,7 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.cell-data-table th, 
+.cell-data-table th,
 .cell-data-table td {
   padding: 12px 15px; /* 统一内边距 */
   text-align: left; /* 统一文本对齐 */
@@ -522,7 +522,7 @@
       background: rgba(255, 77, 79, 0.1);
       color: #ff4d4f;
     }
-    
+
     /* Excel上传区域 */
     .upload-box {
       border: 2px dashed #ddd;
@@ -563,7 +563,7 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    
+
     /* 结果页样式 */
     .result-container {
       margin-top: 1.5rem;
@@ -606,7 +606,7 @@
       color: white;
       font-weight: 500;
     }
-    
+
     /* 细胞选项卡样式 */
     .cell-tabs {
       display: flex;
@@ -632,7 +632,7 @@
       color: white;
       border-color: #1890ff;
     }
-    
+
     /* 疾病卡片 */
     .disease-section {
       margin: 2rem 0;
@@ -694,7 +694,7 @@
       width: 0%;
       transition: width 0.5s ease;
     }
-    
+
     /* 病理机制样式 */
     .pathology-mechanism {
       margin-top: 1.5rem;
@@ -711,7 +711,7 @@
       white-space: pre-line;
       line-height: 1.6;
     }
-    
+
     /* 建议部分 */
     .recommendations {
       background: #f9f9f9;
@@ -727,7 +727,7 @@
       margin-bottom: 0.8rem;
       line-height: 1.5;
     }
-    
+
     /* 按钮样式 */
     .btn {
       padding: 0.7rem 1.4rem;
@@ -777,7 +777,7 @@
       margin-top: 2rem;
       gap: 2rem;
     }
-    
+
     /* 响应式设计 */
     @media (max-width: 768px) {
       .container {
@@ -819,7 +819,7 @@
       本系统用于分析不同细胞类型的线粒体粘度数据，评估潜在疾病风险，并提供专业建议。<br>
       请选择您要开始的方式：
     </p>
-    
+
     <div class="start-options">
       <div class="start-card" id="manual-start">
         <div class="start-card-icon">🔬</div>
@@ -828,7 +828,7 @@
           从列表中选择一种或多种细胞类型，然后手动输入粘度数据
         </p>
       </div>
-      
+
       <div class="start-card" id="excel-start">
         <div class="start-card-icon">📊</div>
         <h3 class="start-card-title">导入Excel数据</h3>
@@ -857,7 +857,7 @@
       </div>
       <h1>选择细胞类型</h1>
       <p>从下拉菜单中选择一种或多种细胞类型进行分析，或导入Excel文件</p>
-      
+
       <div class="input-tabs">
         <button class="tab-btn active" data-tab="manual">
           手动选择
@@ -866,12 +866,12 @@
           导入Excel
         </button>
       </div>
-      
+
       <div class="tab-content active" id="manual-tab">
         <select id="cell-select" class="form-select" multiple="multiple">
           <!-- 动态加载细胞类型 -->
         </select>
-        
+
         <div class="selected-cells">
           <h5>已选择的细胞类型：</h5>
           <div class="selected-cells-list" id="selected-cells">
@@ -879,7 +879,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="tab-content" id="excel-tab">
         <div class="upload-box">
           <input type="file" id="excel-upload-cells" accept=".xlsx,.xls">
@@ -890,7 +890,7 @@
           <div id="excel-preview-cells" class="excel-preview"></div>
         </div>
       </div>
-      
+
       <div class="d-flex justify-content-end mt-3">
         <button id="next-btn" class="btn" disabled>
           下一步
@@ -906,7 +906,7 @@
           <div class="step-label">选择细胞类型</div>
         </div>
         <div class="step-item active">
-        
+
           <div class="step-circle">2</div>
           <div class="step-label">输入粘度数据</div>
         </div>
@@ -916,7 +916,7 @@
         </div>
       </div>
       <h1>输入粘度数据</h1>
-      
+
       <div class="input-tabs">
         <button class="tab-btn active" data-tab="manual">
           手动输入
@@ -925,7 +925,7 @@
           导入Excel
         </button>
       </div>
-      
+
       <div class="tab-content active" id="manual-tab">
         <div class="data-input-container">
           <table class="cell-data-table">
@@ -933,7 +933,7 @@
               <tr>
                 <th>细胞类型</th>
                 <th>粘度值 (cP)</th>
-                <th>状态</th>
+                <th style="text-align: right; padding-right: 187px;">状态</th>
               </tr>
             </thead>
             <tbody id="manual-input-table">
@@ -985,11 +985,11 @@
         </div>
       </div>
       <h1>分析结果</h1>
-      
+
       <div class="cell-tabs mb-4" id="cell-tabs">
         <!-- 动态生成细胞选项卡 -->
       </div>
-      
+
       <div class="result-container">
         <div class="result-content" id="result-content">
           <div class="text-center py-5">
@@ -1020,7 +1020,7 @@
   <script>
     // 模拟数据库
      const cellDatabase = [
-    
+
     {
       "细胞类型": "星形胶质细胞",
       "粘度变化": "升高",
@@ -1138,7 +1138,7 @@
       "粘度变化": "升高",
       "预测疾病类型": "代谢综合症和糖尿病",
       "病理机制": "胰岛素分泌障碍：线粒体基质黏度升高延缓ATP扩散，减弱葡萄糖刺激的ATP/ADP比值变化，抑制KATP通道关闭和钙内流，减少胰岛素囊泡释放\\n氧化损伤：高粘度环境下SOD活性受限，ROS攻击mtDNA导致复合物IV（COX）功能缺陷，进一步削弱能量供应",
-      "icon": "🧶"  
+      "icon": "🧶"
     },
     {
       "细胞类型": "血管内皮细胞",
@@ -1294,10 +1294,10 @@
       "病理机制": "抗原呈递异常：线粒体黏度变化干扰B细胞受体（BCR）信号传导，增强对核小体等自身抗原的提呈能力",
       "icon": "🛡️"
     },
-  
-   
-   
-  
+
+
+
+
     {
       "细胞类型": "树突状细胞（DCs）",
       "粘度变化": "升高",
@@ -1500,7 +1500,7 @@
       // 存储选中的细胞和数据
       let selectedCells = [];
       let cellData = {};
-      
+
       // 细胞选择变化事件
       $('#cell-select').on('change', function() {
         selectedCells = Array.from($(this).find('option:selected')).map(opt => ({
@@ -1508,7 +1508,7 @@
           name: opt.text,
           icon: $(opt).data('icon')
         }));
-        
+
         updateSelectedCellsList();
         $('#next-btn').prop('disabled', selectedCells.length === 0);
       });
@@ -1517,12 +1517,12 @@
       function updateSelectedCellsList() {
         const container = $('#selected-cells');
         container.empty();
-        
+
         if (selectedCells.length === 0) {
           container.append('<div class="empty-message">尚未选择任何细胞类型</div>');
           return;
         }
-        
+
         selectedCells.forEach(cell => {
           const item = $(`
             <div class="cell-item" data-cell="${cell.id}">
@@ -1535,7 +1535,7 @@
           `);
           container.append(item);
         });
-        
+
         // 添加移除按钮事件
         $('.remove-cell').on('click', function() {
           const cellId = $(this).data('cell');
@@ -1547,36 +1547,36 @@
       // 标签切换
       $('.tab-btn').on('click', function() {
         const tabId = $(this).data('tab');
-        
+
         // 如果是细胞选择页面的标签切换
         if ($(this).closest('#cell-selection').length) {
           $('.tab-btn', '#cell-selection').removeClass('active');
           $(this).addClass('active');
-          
+
           $('.tab-content', '#cell-selection').removeClass('active');
           $(`#${tabId}-tab`, '#cell-selection').addClass('active');
-          
+
           // 重置下一步按钮状态
           if (tabId === 'manual') {
             $('#next-btn').prop('disabled', selectedCells.length === 0);
           } else {
             $('#next-btn').prop('disabled', $('#file-info-cells').text() === '');
           }
-        } 
+        }
         // 如果是数据输入页面的标签切换
         else {
           $('.tab-btn', '#data-input').removeClass('active');
           $(this).addClass('active');
-          
+
           $('.tab-content', '#data-input').removeClass('active');
           $(`#${tabId}-tab`, '#data-input').addClass('active');
-          
+
           if (tabId === 'manual') {
             generateManualInputTable();
           } else {
             $('#excel-preview').empty();
           }
-          
+
           checkAllInputsComplete();
         }
       });
@@ -1588,7 +1588,7 @@ $('#next-btn').on('click', function() {
   if ($('#excel-tab', '#cell-selection').hasClass('active')) {
     const file = $('#excel-upload-cells')[0].files[0];
     if (!file) return;
-    
+
     const reader = new FileReader();
     reader.onload = function(e) {
       const data = new Uint8Array(e.target.result);
@@ -1598,27 +1598,27 @@ $('#next-btn').on('click', function() {
 
       // 处理Excel数据
       processExcelDataForCellSelection(jsonData);
-      
+
       // 切换到数据输入页面
       $('#cell-selection').removeClass('active-step');
       $('#data-input').addClass('active-step');
-      
+
       // 自动切换到手动输入标签（因为数据已导入）
       $('.tab-btn', '#data-input').removeClass('active');
       $('.tab-btn[data-tab="manual"]', '#data-input').addClass('active');
-      
+
       $('.tab-content', '#data-input').removeClass('active');
       $('#manual-tab', '#data-input').addClass('active');
-      
+
       // 这里不再调用generateManualInputTable()，因为processExcelDataForCellSelection中已经处理
     };
     reader.readAsArrayBuffer(file);
-  } 
+  }
   // 如果是手动选择模式
   else {
     $('#cell-selection').removeClass('active-step');
     $('#data-input').addClass('active-step');
-    
+
     // 根据选择的细胞生成输入表格
     if ($('#manual-tab', '#data-input').hasClass('active')) {
       generateManualInputTable();
@@ -1631,20 +1631,20 @@ $('#next-btn').on('click', function() {
 function processExcelDataForCellSelection(data) {
   selectedCells = [];
   const rawExcelData = {}; // 临时存储原始Excel数据
-  
+
   // 标记数据来源
   window.dataSource = 'excel';
 
   for (let i = 1; i < data.length; i++) {
     const row = data[i];
     if (!row || row.length < 2) continue;
-    
+
     const cellType = row[0];
     if (!cellType) continue;
-    
+
     const matchedCell = cellDatabase.find(c => c.细胞类型 === cellType);
     if (!matchedCell) continue;
-    
+
     // 收集所有粘度值
     const viscosities = [];
     for (let j = 1; j < row.length; j++) {
@@ -1653,7 +1653,7 @@ function processExcelDataForCellSelection(data) {
         viscosities.push(value);
       }
     }
-    
+
     if (viscosities.length > 0) {
       // 存储原始数据（临时）
       if (!rawExcelData[cellType]) {
@@ -1664,7 +1664,7 @@ function processExcelDataForCellSelection(data) {
         };
       }
       rawExcelData[cellType].rawData.push(...viscosities);
-      
+
       // 添加到选中的细胞列表
       if (!selectedCells.some(c => c.id === matchedCell.细胞类型)) {
         selectedCells.push({
@@ -1676,14 +1676,14 @@ function processExcelDataForCellSelection(data) {
       }
     }
   }
-  
+
   // 计算平均值并存入cellData
   cellData = {};
   Object.keys(rawExcelData).forEach(cellType => {
     const cell = rawExcelData[cellType];
     const sum = cell.rawData.reduce((a, b) => a + b, 0);
     const avg = sum / cell.rawData.length;
-    
+
     cellData[cellType] = {
       name: cell.name,
       icon: cell.icon,
@@ -1692,11 +1692,11 @@ function processExcelDataForCellSelection(data) {
       source: 'excel'
     };
   });
-  
+
   // 更新UI
   updateSelectedCellsList();
   generateEditableInputTableFromExcelData();
-  
+
   // 直接启用分析按钮
   $('#analyze-btn').prop('disabled', false);
 }
@@ -1735,7 +1735,7 @@ function processInputData() {
   });
 
   // 检查是否所有选中的细胞都有数据
-  const allCellsHaveData = selectedCells.every(cell => 
+  const allCellsHaveData = selectedCells.every(cell =>
     processedData[cell.id] && processedData[cell.id].data.length > 0
   );
 
@@ -1749,13 +1749,13 @@ function processInputData() {
 
 // 修改后的 analyze-btn 点击事件
 $('#analyze-btn').on('click', function() {
-  
+
   // 检查是否有有效数据
-  if (Object.keys(cellData).length === 0) {
+  if (Object.keys(cellData).length === 1) {
     alert('没有有效数据可供分析');
     return;
   }
-  
+
   // 确保所有数据都是平均值形式
   Object.keys(cellData).forEach(cellId => {
     const cell = cellData[cellId];
@@ -1764,20 +1764,20 @@ $('#analyze-btn').on('click', function() {
       cell.data = [sum / cell.data.length];
     }
   });
-  
+
   // 显示结果
   showResults();
   $('#export-btn').prop('disabled', false);
 });
-  
- 
+
+
 // 修改后的 analyze-btn
 // 新增：生成可编辑的输入表格
 // 在generateEditableInputTableFromExcelData函数中添加：
 function generateEditableInputTableFromExcelData() {
   const table = $('#manual-input-table');
   table.empty();
-  
+
   if (selectedCells.length === 0) {
     table.append(`
       <tr>
@@ -1788,48 +1788,51 @@ function generateEditableInputTableFromExcelData() {
     `);
     return;
   }
-  
+
   // 添加表头
   table.append(`
+  <table style="width: 300%; table-layout: fixed; border-collapse: collapse;">
     <thead>
       <tr>
-        <th>细胞类型</th>
-        <th>粘度值 (cP)</th>
-        、
-        <th>状态</th>
+        <thead>
+      <tr>
+        <th style="width: 15%">细胞类型</th>
+        <th style="width: 20%">粘度值 (cP)</th>
+        <th style="width: 10%">状态</th>
+      </tr>
       </tr>
     </thead>
     <tbody id="manual-input-body"></tbody>
   `);
-  
+
   const tbody = $('#manual-input-body');
-  
+
   // 为每种细胞添加行（显示平均值）
   selectedCells.forEach(cell => {
     const cellId = cell.id;
     const cellInfo = cellData[cellId];
-    
+
     const row = $(`
-      <tr data-cell="${cellId}">
-        <td>
+      <tr data-cell="${cellId}" style="width: 300%;">
+        <td style="width: 15%">
           <span class="cell-icon">${cell.icon}</span>
           ${cell.name}
         </td>
-        <td>
+        <td style="width: 20%">
           ${cellInfo.data[0].toFixed(2)} cP (平均值)
         </td>
-       
-        <td class="status-cell">
+
+        <td class="status-cell" style="width: 10%">
           <span class="status-badge status-safe">已计算</span>
         </td>
       </tr>
     `);
-    
+
     // 添加查看详情事件
     row.find('.view-details').on('click', function() {
       showDetailsModal(cellInfo);
     });
-    
+
     tbody.append(row);
   });
 }
@@ -1843,7 +1846,7 @@ function showDetailsModal(cell) {
 
   const avg = cell.data[0];
   const count = cell.rawData.length;
-  
+
   const modalHtml = `
     <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -1859,7 +1862,7 @@ function showDetailsModal(cell) {
             <div class="alert alert-info">
               基于 ${count} 个测量值计算得出平均值: <strong>${avg.toFixed(2)} cP</strong>
             </div>
-            
+
             <h5>所有原始测量值</h5>
             <div class="table-responsive">
               <table class="table table-striped">
@@ -1894,15 +1897,15 @@ function showDetailsModal(cell) {
       </div>
     </div>
   `;
-  
+
   // 移除已有的模态框
   $('.modal').remove();
-  
+
   // 添加并显示新模态框
   $('body').append(modalHtml);
   const modal = new bootstrap.Modal(document.getElementById('detailsModal'));
   modal.show();
-  
+
   // 清理
   $('#detailsModal').on('hidden.bs.modal', function() {
     $(this).remove();
@@ -1925,7 +1928,7 @@ function getStatusText(value) {
 function generateManualInputTable() {
   const table = $('#manual-input-table');
   table.empty();
-  
+
   if (selectedCells.length === 0) {
     table.append(`
       <tr>
@@ -1936,27 +1939,27 @@ function generateManualInputTable() {
     `);
     return;
   }
-  
+
   // 添加表头
   table.append(`
     <thead>
       <tr>
         <th>细胞类型</th>
         <th>粘度值 (cP)</th>
-        
+
         <th>状态</th>
       </tr>
     </thead>
     <tbody id="manual-input-body"></tbody>
   `);
-  
+
   const tbody = $('#manual-input-body');
-  
+
   selectedCells.forEach(cell => {
     // 为每种细胞添加初始行
     addNewViscosityRow(tbody, cell);
   });
-  
+
   // 添加输入事件监听
   $('.viscosity-input').on('input', updateViscosityStatus);
   checkAllInputsComplete();
@@ -1971,7 +1974,7 @@ function addNewViscosityRow(container, cell, value = '') {
         ${cell.name}
       </td>
       <td>
-        <input type="number" class="viscosity-input form-control" 
+        <input type="number" class="viscosity-input form-control"
                value="${value}" min="0" max="300" step="0.1">
       </td>
       <td>
@@ -1989,14 +1992,14 @@ function addNewViscosityRow(container, cell, value = '') {
       </td>
     </tr>
   `);
-  
+
   container.append(row);
-  
+
   // 添加行操作按钮事件
   row.find('.add-row').on('click', function() {
     addNewViscosityRow(container, cell);
   });
-  
+
   row.find('.remove-row').on('click', function() {
     if (container.find(`tr[data-cell="${cell.id}"]`).length > 1) {
       row.remove();
@@ -2005,7 +2008,7 @@ function addNewViscosityRow(container, cell, value = '') {
       alert('每种细胞至少需要保留一个数据输入行');
     }
   });
-  
+
   row.find('.viscosity-input').on('input', updateViscosityStatus);
 }
       // 上一步按钮
@@ -2019,7 +2022,7 @@ function addNewViscosityRow(container, cell, value = '') {
       function generateManualInputTable() {
   const table = $('#manual-input-table');
   table.empty();
-  
+
   if (selectedCells.length === 0) {
     table.append(`
       <tr>
@@ -2030,31 +2033,34 @@ function addNewViscosityRow(container, cell, value = '') {
     `);
     return;
   }
-  
+
   // 添加表头
-  table.append(`
+table.append(`
+  <table style="width: 300%; table-layout: fixed; ">
     <thead>
       <tr>
-        <th style="width: 33%">细胞类型</th>
-        <th style="width: 33%">粘度值 (cP)</th>
-        
-        <th style="width: 33%">状态</th>
+
+        <th  style="width: 25%;">细胞类型</th>
+        <th  style="padding-right: 40px">粘度值(cP)与操作</th>
+
+        <th style="padding-right: 100px;">状态</th>
       </tr>
     </thead>
     <tbody id="manual-input-body"></tbody>
-  `);
-  
-  const tbody = $('#manual-input-body');
-  
-  selectedCells.forEach(cell => {
-    // 为每种细胞添加初始行
-    addNewViscosityRow(tbody, cell);
-  });
-  
-  // 添加输入事件监听
-  $('.viscosity-input').on('input', updateViscosityStatus);
-  checkAllInputsComplete();
+  </table>
+`);
+const tbody = $('#manual-input-body');
+
+selectedCells.forEach(cell => {
+  // 为每种细胞添加初始行
+  addNewViscosityRow(tbody, cell);
+});
+
+// 添加输入事件监听
+$('.viscosity-input').on('input', updateViscosityStatus);
+checkAllInputsComplete();
 }
+
 // 添加新的粘度输入行
 function addNewViscosityRow(container, cell, value = '') {
   const rowId = Date.now(); // 使用时间戳作为唯一ID
@@ -2065,16 +2071,18 @@ function addNewViscosityRow(container, cell, value = '') {
         ${cell.name}
       </td>
       <td>
-        <input type="number" class="viscosity-input form-control" 
-               value="${value}" min="0" max="300" step="0.1">
-      </td>
-      <td>
-        <button class="btn btn-sm btn-outline-primary add-row" title="添加更多数据">
-          +
-        </button>
-        <button class="btn btn-sm btn-outline-danger remove-row" title="删除此行">
-          ×
-        </button>
+        <div class="input-group">
+          <input type="number" class="viscosity-input form-control"
+                 value="${value}" min="0" max="300" step="0.1">
+          <div class="input-group-append">
+            <button class="btn btn-sm btn-outline-primary add-row" title="添加更多数据">
+              +
+            </button>
+            <button class="btn btn-sm btn-outline-danger remove-row" title="删除此行">
+              ×
+            </button>
+          </div>
+        </div>
       </td>
       <td class="status-cell">
         <span class="status-badge ${value ? 'status-safe' : 'status-empty'}">
@@ -2083,14 +2091,13 @@ function addNewViscosityRow(container, cell, value = '') {
       </td>
     </tr>
   `);
-  
   container.append(row);
-  
+
   // 添加行操作按钮事件
   row.find('.add-row').on('click', function() {
     addNewViscosityRow(container, cell);
   });
-  
+
   row.find('.remove-row').on('click', function() {
     if (container.find(`tr[data-cell="${cell.id}"]`).length > 1) {
       row.remove();
@@ -2099,21 +2106,21 @@ function addNewViscosityRow(container, cell, value = '') {
       alert('每种细胞至少需要保留一个数据输入行');
     }
   });
-  
+
   // 添加输入事件监听
   row.find('.viscosity-input').on('input', updateViscosityStatus);
 }
-      
+
       // 更新粘度输入状态
       function updateViscosityStatus() {
   const input = $(this);
   const value = parseFloat(input.val()) || 0;
   const row = input.closest('tr');
   const statusCell = row.find('.status-cell');
-  
+
   let statusText = '待分析';
   let statusClass = 'status-safe';
-  
+
   if (isNaN(value) || input.val() === '') {
     statusText = '未输入';
     statusClass = 'status-empty';
@@ -2124,25 +2131,25 @@ function addNewViscosityRow(container, cell, value = '') {
     statusText = '偏低';
     statusClass = 'status-info';
   }
-  
+
   statusCell.empty().append(`
     <span class="status-badge ${statusClass}">${statusText}</span>
   `);
-  
+
   checkAllInputsComplete();
 }
-      
+
       // 检查所有输入是否完成
       function checkAllInputsComplete() {
   // 如果是Excel导入模式
   if (window.dataSource === 'excel') {
     // 确保至少有一个细胞有数据
-    const hasData = Object.keys(cellData).length > 0 && 
+    const hasData = Object.keys(cellData).length > 0 &&
                    Object.values(cellData).some(cell => cell.data.length > 0);
     $('#analyze-btn').prop('disabled', !hasData);
     return;
   }
-  
+
   // 手动输入模式的验证
   let allValid = true;
   $('.viscosity-input').each(function() {
@@ -2152,80 +2159,80 @@ function addNewViscosityRow(container, cell, value = '') {
       return false; // 退出循环
     }
   });
-  
+
   $('#analyze-btn').prop('disabled', !allValid);
 }
       // Excel文件处理（数据输入页面）
       $('#excel-upload').on('change', function(e) {
         const file = e.target.files[0];
         if (!file) return;
-        
+
         $('#file-info').text(`已选择: ${file.name}`);
-        
+
         // 解析Excel文件
         const reader = new FileReader();
         reader.onload = function(e) {
           const data = new Uint8Array(e.target.result);
           const workbook = XLSX.read(data, { type: 'array' });
-          
+
           // 获取第一个工作表
           const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
           const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
-          
+
           // 显示预览
           showExcelPreview(jsonData);
         };
         reader.readAsArrayBuffer(file);
       });
-      
+
       // Excel文件处理（细胞选择页面）
       $('#excel-upload-cells').on('change', function(e) {
         const file = e.target.files[0];
         if (!file) return;
-        
+
         $('#file-info-cells').text(`已选择: ${file.name}`);
-        
+
         // 解析Excel文件
         const reader = new FileReader();
         reader.onload = function(e) {
           const data = new Uint8Array(e.target.result);
           const workbook = XLSX.read(data, { type: 'array' });
-          
+
           // 获取第一个工作表
           const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
           const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
-          
+
           // 显示预览
           showExcelPreviewCells(jsonData);
         };
         reader.readAsArrayBuffer(file);
-        
+
         // 启用下一步按钮
         $('#next-btn').prop('disabled', false);
       });
-      
+
       // 显示Excel预览（数据输入页面）
       function showExcelPreview(data) {
         const preview = $('#excel-preview');
         preview.empty();
-        
+
         if (data.length === 0) {
           preview.append('<p class="text-muted p-3">Excel文件中没有数据</p>');
           return;
         }
-        
+
         // 创建预览表格
         const table = $('<table class="table table-bordered table-sm mb-0"></table>');
         const thead = $('<thead class="table-light"></thead>');
         const tbody = $('<tbody></tbody>');
-        
+
         // 添加表头
         const headerRow = $('<tr></tr>');
         data[0].forEach(cell => {
           headerRow.append($('<th></th>').text(cell));
         });
         thead.append(headerRow);
-        
+
         // 添加数据行（最多显示5行）
         for (let i = 1; i < Math.min(6, data.length); i++) {
           const row = $('<tr></tr>');
@@ -2234,75 +2241,75 @@ function addNewViscosityRow(container, cell, value = '') {
           });
           tbody.append(row);
         }
-        
+
         table.append(thead).append(tbody);
         preview.append(table);
-        
+
         if (data.length > 6) {
           preview.append(`<p class="text-muted p-2">显示前5行，共${data.length-1}行数据</p>`);
         }
-        
+
         $('#analyze-btn').prop('disabled', false);
       }
-      
+
       // 显示Excel预览（细胞选择页面）
-      
+
       function showExcelPreviewCells(data) {
   const preview = $('#excel-preview-cells');
   preview.empty();
-  
+
   if (data.length === 0) {
     preview.append('<p class="text-muted p-3">Excel文件中没有数据</p>');
     return;
   }
-  
+
   // 创建预览表格
   const table = $('<table class="table table-bordered table-sm mb-0"></table>');
   const thead = $('<thead class="table-light"></thead>');
   const tbody = $('<tbody></tbody>');
-  
+
   // 添加表头
   const headerRow = $('<tr></tr>');
   headerRow.append($('<th>细胞类型</th>'));
-  
+
   // 动态添加粘度列标题
   const maxColumns = Math.max(...data.map(row => row.length)) - 1;
   for (let i = 1; i <= maxColumns; i++) {
     headerRow.append($(`<th>粘度值 ${i}</th>`));
   }
-  
+
   thead.append(headerRow);
-  
+
   // 添加数据行（最多显示5行）
   for (let i = 1; i < Math.min(6, data.length); i++) {
     const row = $('<tr></tr>');
     // 细胞类型
     row.append($('<td></td>').text(data[i][0] || ''));
-    
+
     // 粘度值
     for (let j = 1; j < data[i].length; j++) {
       row.append($('<td></td>').text(data[i][j]));
     }
-    
+
     // 补齐空白单元格
     for (let j = data[i].length; j <= maxColumns; j++) {
       row.append($('<td></td>'));
     }
-    
+
     tbody.append(row);
   }
-  
+
   table.append(thead).append(tbody);
   preview.append(table);
-  
+
   if (data.length > 6) {
     preview.append(`<p class="text-muted p-2">显示前5行，共${data.length-1}行数据</p>`);
   }
 }
       // 分析按钮
-      
+
       $('#analyze-btn').on('click', function() {
-        
+
   // 如果是Excel导入的数据
   if (window.dataSource === 'excel') {
     // 计算每种细胞的平均值
@@ -2310,7 +2317,7 @@ function addNewViscosityRow(container, cell, value = '') {
       const cell = cellData[cellId];
       const sum = cell.data.reduce((a, b) => a + b, 0);
       const avg = sum / cell.data.length;
-      
+
       // 更新为平均值
       cellData[cellId] = {
         ...cell,
@@ -2318,25 +2325,25 @@ function addNewViscosityRow(container, cell, value = '') {
         rawData: cell.data  // 保留原始数据
       };
     });
-    
+
     showResults();
     $('#export-btn').prop('disabled', false);
     return;
   }
-  
+
   // 处理手动输入的数据
   const inputData = processInputData();
   if (!inputData.isValid) {
     alert('请确保每种细胞至少输入一个有效的粘度值');
     return;
   }
-  
+
   // 计算平均值
   Object.keys(inputData.data).forEach(cellId => {
     const cell = inputData.data[cellId];
     const sum = cell.data.reduce((a, b) => a + b, 0);
     const avg = sum / cell.data.length;
-    
+
     cellData[cellId] = {
       name: cell.name,
       icon: cell.icon,
@@ -2344,7 +2351,7 @@ function addNewViscosityRow(container, cell, value = '') {
       rawData: cell.data
     };
   });
-  
+
   showResults();
   $('#export-btn').prop('disabled', false);
 });
@@ -2353,29 +2360,29 @@ function addNewViscosityRow(container, cell, value = '') {
       // 处理Excel数据
       function processExcelData(data) {
   cellData = {};
-  
+
   // 假设第一列是细胞类型，第二列是粘度值
   for (let i = 1; i < data.length; i++) {
     const row = data[i];
     if (!row || row.length < 2) continue;
-    
+
     const cellType = row[0];
     const viscosity = parseFloat(row[1]);
-    
+
     if (!cellType || isNaN(viscosity)) continue;
-    
+
     // 查找匹配的细胞类型（更宽松的匹配）
-    const matchedCell = selectedCells.find(c => 
-      c.name === cellType || 
+    const matchedCell = selectedCells.find(c =>
+      c.name === cellType ||
       c.id === cellType ||
-      c.name.includes(cellType) || 
+      c.name.includes(cellType) ||
       cellType.includes(c.name));
-    
+
     if (!matchedCell) {
       console.log(`未找到匹配的细胞类型: ${cellType}`);
       continue;
     }
-    
+
     if (!cellData[matchedCell.id]) {
       cellData[matchedCell.id] = {
         name: matchedCell.name,
@@ -2383,22 +2390,22 @@ function addNewViscosityRow(container, cell, value = '') {
         data: []
       };
     }
-    
+
     cellData[matchedCell.id].data.push(viscosity);
   }
   $('#analyze-btn').on('click', function() {
   // 处理两种数据来源：
   // 1. 手动输入的数据（通过input框）
   // 2. Excel导入的数据（存储在cellData中）
-  
+
   const manualData = {};
   let hasManualData = false;
-  
+
   // 收集手动输入的数据
   $('#manual-input-body tr[data-cell]').each(function() {
     const cellId = $(this).data('cell');
     const value = parseFloat($(this).find('.viscosity-input').val());
-    
+
     if (!isNaN(value)) {
       if (!manualData[cellId]) {
         manualData[cellId] = {
@@ -2411,21 +2418,21 @@ function addNewViscosityRow(container, cell, value = '') {
       hasManualData = true;
     }
   });
-  
+
   // 确定使用哪个数据源
   const finalData = hasManualData ? manualData : cellData;
-  
-  if (Object.keys(finalData).length === 0) {
+
+  if (Object.keys(finalData).length === 1) {
     alert('没有有效数据可供分析');
     return;
   }
-  
+
   // 计算平均值
   Object.keys(finalData).forEach(cellId => {
     const cell = finalData[cellId];
     const sum = cell.data.reduce((a, b) => a + b, 0);
     const avg = sum / cell.data.length;
-    
+
     cellData[cellId] = {
       name: cell.name,
       icon: cell.icon,
@@ -2433,7 +2440,7 @@ function addNewViscosityRow(container, cell, value = '') {
       rawData: cell.data
     };
   });
-  
+
   // 显示结果
   showResults();
   $('#export-btn').prop('disabled', false);
@@ -2448,11 +2455,11 @@ function addNewViscosityRow(container, cell, value = '') {
 
         $('#data-input').removeClass('active-step');
         $('#results').addClass('active-step');
-        
+
         // 生成细胞选项卡
         const cellTabs = $('#cell-tabs');
         cellTabs.empty();
-        
+
         Object.keys(cellData).forEach((cellId, index) => {
           const cell = cellData[cellId];
           const tab = $(`
@@ -2462,7 +2469,7 @@ function addNewViscosityRow(container, cell, value = '') {
           `);
           cellTabs.append(tab);
         });
-        
+
         // 生成第一个细胞的结果内容
         if (Object.keys(cellData).length > 0) {
           generateResultContent(Object.keys(cellData)[0]);
@@ -2488,9 +2495,9 @@ function addNewViscosityRow(container, cell, value = '') {
           generateResultContent($(this).data('cell'));
         });
       }
-    
+
       // 生成结果内容
- 
+
       // 修改后的 generateResultContent 函数
 function generateResultContent(cellType) {
   const resultContent = $('#result-content');
@@ -2501,7 +2508,7 @@ function generateResultContent(cellType) {
   // 在数据库中查找匹配的细胞信息
   const dbCell = cellDatabase.find(c => c.细胞类型 === cellType);
 
-  
+
   // 确定风险等级
   let riskLevel, riskColor;
   if (avg > 150) {
@@ -2517,7 +2524,7 @@ function generateResultContent(cellType) {
     riskLevel = '异常偏低';
     riskColor = '#1890ff';
   }
-  
+
   // 生成HTML内容
   let htmlContent = `
     <div class="result-header">
@@ -2531,7 +2538,7 @@ function generateResultContent(cellType) {
       </div>
     </div>
   `;
-  
+
   // 只有当粘度高于正常范围(>100)时才显示疾病风险和病理机制
   if (avg > 100 && dbCell) {
     htmlContent += `
@@ -2555,18 +2562,18 @@ function generateResultContent(cellType) {
           </div>
         </div>
       </div>
-      
+
       <div class="pathology-mechanism">
         <h5 class="pathology-title">病理机制分析</h5>
         <div class="pathology-content">${dbCell.病理机制}</div>
       </div>
     `;
   }
-  
+
   // 总是显示建议
   const recommendations = generateRecommendations(avg, dbCell);
   const recommendationsHTML = recommendations.map(rec => `<li>${rec}</li>`).join('');
-  
+
   htmlContent += `
     <div class="recommendations">
       <h5>建议</h5>
@@ -2575,9 +2582,9 @@ function generateResultContent(cellType) {
       </ul>
     </div>
   `;
-  
+
   resultContent.html(htmlContent);
-  
+
   // 动画效果
   $('.risk-progress').each(function() {
     $(this).css('width', '0%').animate({
@@ -2595,7 +2602,7 @@ function generateResultContent(cellType) {
       // 生成建议
       function generateRecommendations(avg, dbCell) {
         const recs = [];
-        
+
         if (dbCell) {
           if (avg > 150) {
             recs.push(`立即就医：针对${dbCell.预测疾病类型}进行专业检查`);
@@ -2631,7 +2638,7 @@ function generateResultContent(cellType) {
             recs.push('管理压力：长期压力会影响线粒体功能');
           }
         }
-        
+
         return recs;
       }
 
@@ -2648,11 +2655,11 @@ function generateResultContent(cellType) {
         $('#excel-preview-cells').empty();
         $('#file-info').text('');
         $('#excel-preview').empty();
-        
+
         // 重置到手动选择标签
         $('.tab-btn', '#cell-selection').removeClass('active');
         $('.tab-btn[data-tab="manual"]', '#cell-selection').addClass('active');
-        
+
         $('.tab-content', '#cell-selection').removeClass('active');
         $('#manual-tab', '#cell-selection').addClass('active');
       });
@@ -2661,21 +2668,21 @@ function generateResultContent(cellType) {
       $('#export-btn').on('click', function() {
         exportResults();
       });
-      
+
       // 导出结果功能
       function exportResults() {
         // 创建工作簿
         const wb = XLSX.utils.book_new();
-        
+
         // 为每个细胞类型创建工作表
         Object.keys(cellData).forEach(cellId => {
           const cell = cellData[cellId];
           const data = cell.data;
           const avg = data.reduce((a, b) => a + b, 0) / data.length;
-          
+
           // 在数据库中查找匹配的细胞信息
           const dbCell = cellDatabase.find(c => c.细胞类型 === cellId);
-          
+
           // 准备数据
           const sheetData = [
             ['细胞类型', cell.name],
@@ -2686,7 +2693,7 @@ function generateResultContent(cellType) {
             [],
             ['相关疾病风险']
           ];
-          
+
           if (dbCell) {
             sheetData.push(
               ['预测疾病类型', dbCell.预测疾病类型],
@@ -2696,20 +2703,20 @@ function generateResultContent(cellType) {
               ...dbCell.病理机制.split('\n').map(line => [line])
             );
           }
-          
+
           sheetData.push(
             [],
             ['建议'],
             ...generateRecommendations(avg, dbCell).map(r => [r])
           );
-          
+
           // 创建工作表
           const ws = XLSX.utils.aoa_to_sheet(sheetData);
-          
+
           // 添加到工作簿
           XLSX.utils.book_append_sheet(wb, ws, cell.name.substring(0, 31)); // 工作表名称最多31字符
         });
-        
+
         // 导出Excel文件
         const fileName = `线粒体粘度分析_${new Date().toISOString().slice(0, 10)}.xlsx`;
         XLSX.writeFile(wb, fileName);
@@ -2720,11 +2727,11 @@ $('#manual-start').on('click', function() {
   $('#welcome-page').removeClass('active-step');
   $('#cell-selection').addClass('active-step');
   dataSource = 'manual';
-  
+
   // 默认选择手动选择标签
   $('.tab-btn', '#cell-selection').removeClass('active');
   $('.tab-btn[data-tab="manual"]', '#cell-selection').addClass('active');
-  
+
   $('.tab-content', '#cell-selection').removeClass('active');
   $('#manual-tab', '#cell-selection').addClass('active');
 });
@@ -2733,11 +2740,11 @@ $('#excel-start').on('click', function() {
   $('#welcome-page').removeClass('active-step');
   $('#cell-selection').addClass('active-step');
   dataSource = 'excel';
-  
+
   // 默认选择Excel导入标签
   $('.tab-btn', '#cell-selection').removeClass('active');
   $('.tab-btn[data-tab="excel"]', '#cell-selection').addClass('active');
-  
+
   $('.tab-content', '#cell-selection').removeClass('active');
   $('#excel-tab', '#cell-selection').addClass('active');
 });

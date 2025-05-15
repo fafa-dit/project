@@ -74,7 +74,10 @@
   border-color: #1890ff;
   outline: none;
 }
-
+.status-info {
+  background: rgba(255, 77, 79, 0.1); /* 使用与status-danger相同的红色调 */
+  color: #ff4d4f; /* 文字也改为红色 */
+}
 /* 按钮容器样式 */
 .action-buttons {
   display: flex;
@@ -931,9 +934,9 @@
           <table class="cell-data-table">
             <thead>
               <tr>
-                <th>细胞类型</th>
-                <th>粘度值 (cP)</th>
-                <th style="text-align: right; padding-right: 187px;">状态</th>
+                <th >    </th>
+                <th>        </th>
+                <th style="text-align: right; padding-right: 187px;">  </th>
               </tr>
             </thead>
             <tbody id="manual-input-table">
@@ -2118,7 +2121,7 @@ function addNewViscosityRow(container, cell, value = '') {
   const row = input.closest('tr');
   const statusCell = row.find('.status-cell');
 
-  let statusText = '待分析';
+  let statusText = '正常';
   let statusClass = 'status-safe';
 
   if (isNaN(value) || input.val() === '') {
@@ -2522,7 +2525,7 @@ function generateResultContent(cellType) {
     riskColor = '#52c41a';
   } else {
     riskLevel = '异常偏低';
-    riskColor = '#1890ff';
+    riskColor = '#FF0000';
   }
 
   // 生成HTML内容

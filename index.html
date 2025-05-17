@@ -1662,7 +1662,7 @@
         const viscosities = [];
         for (let j = 1; j < row.length; j++) {
           const value = parseFloat(row[j]);
-          if (!isNaN(value) && value > 0 && value <= 200) {
+          if (!isNaN(value) && value >= 0 && value <= 200) {
             viscosities.push(value);
           }
         }
@@ -1927,7 +1927,7 @@
 
 // 辅助函数
     function getStatusClass(value) {
-      if(value >200||value<0) return 'status-warning';
+      if(value >200||value<=0) return 'status-warning';
       if (value > 100) return 'status-warning';
       if (value > 10) return 'status-safe';
 
@@ -1935,7 +1935,7 @@
     }
 
     function getStatusText(value) {
-      if(value >200||value<0) return '不符合';
+      if(value >200||value<=0) return '不符合';
       if (value > 100) return '偏高';
       if (value > 10) return '正常';
 
@@ -2127,7 +2127,7 @@
       // 添加输入验证（手动输入）
       row.find('.viscosity-input').on('change', function() {
         const value = parseFloat($(this).val());
-        if (!isNaN(value) && (value < 0 || value > 200)) {
+        if (!isNaN(value) && (value <= 0 || value > 200)) {
           alert('粘度值必须在 0-200 cP 范围内！');
           $(this).val(''); // 清空无效输入
         }
@@ -2136,7 +2136,7 @@
       // 添加输入事件监听
       row.find('.viscosity-input').on('change', function() {
         const value = parseFloat($(this).val());
-        if (!isNaN(value) && (value < 0 || value > 200)) {
+        if (!isNaN(value) && (value <= 0 || value > 200)) {
           alert('粘度值必须在0-200 cP范围内');
           $(this).val('');
         }
@@ -2160,13 +2160,13 @@
         statusText = '未输入';
         statusClass = 'status-empty';
       }
-      else if (value > 200|| value <0) {
+      else if (value > 200|| value <=0) {
         statusText = '不符合';
         statusClass = 'status-info';
       }else if (value > 100) {
         statusText = '偏高';
         statusClass = 'status-warning';
-      } else if (value < 10) {
+      } else if (value < 10 && value >0) {
         statusText = '偏低';
         statusClass = 'status-info';
       }
@@ -2552,7 +2552,7 @@
 
       // 确定风险等级
       let riskLevel, riskColor;
-     if (avg > 200||avg<10) {
+     if (avg > 200||avg<=0) {
         riskLevel = '不符合';
         riskColor = '#52c41a';
       }

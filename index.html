@@ -1662,7 +1662,7 @@
         const viscosities = [];
         for (let j = 1; j < row.length; j++) {
           const value = parseFloat(row[j]);
-          if (!isNaN(value) && value >= 0 && value <= 200) {
+          if (!isNaN(value) && value > 0 && value <= 200) {
             viscosities.push(value);
           }
         }
@@ -1929,7 +1929,7 @@
     function getStatusClass(value) {
       if(value >200||value<0) return 'status-warning';
       if (value > 100) return 'status-warning';
-      if (value >= 10) return 'status-safe';
+      if (value > 10) return 'status-safe';
 
       return 'status-info';
     }
@@ -1937,7 +1937,7 @@
     function getStatusText(value) {
       if(value >200||value<0) return '不符合';
       if (value > 100) return '偏高';
-      if (value >= 10) return '正常';
+      if (value > 10) return '正常';
 
       return '偏低';
     }
@@ -2562,7 +2562,7 @@
       } else if (avg > 100) {
         riskLevel = '轻度偏高';
         riskColor = '#faad14';
-      } else if (avg >= 10) {
+      } else if (avg > 10) {
         riskLevel = '正常';
         riskColor = '#52c41a';
       }
